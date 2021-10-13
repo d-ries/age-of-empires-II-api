@@ -18,5 +18,5 @@ class Structure(Resource):
 
 class StructureList(Resource):
     def get(self):
-        return jsonify({list(map(lambda x: x.json(),
+        return jsonify(list(map(lambda x: x.json(),
                         StructureModel.query.all())))
