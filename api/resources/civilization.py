@@ -17,5 +17,5 @@ class Civilization(Resource):
 
 class CivilizationList(Resource):
     def get(self):
-        return jsonify({'civilizations': list(map(lambda x: x.json(),
-                        CivilizationModel.query.all()))})
+        return jsonify(list(map(lambda x: x.json(),
+                        CivilizationModel.query.all())))

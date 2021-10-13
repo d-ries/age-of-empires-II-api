@@ -16,5 +16,5 @@ class Unit(Resource):
 
 class UnitList(Resource):
     def get(self):
-        return jsonify({'units': list(map(lambda x: x.json(),
-                        UnitModel.query.all()))})
+        return jsonify({list(map(lambda x: x.json(),
+                        UnitModel.query.all())))

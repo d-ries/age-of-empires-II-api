@@ -16,5 +16,5 @@ class Technology(Resource):
 
 class TechnologyList(Resource):
     def get(self):
-        return jsonify({'technologies': list(map(lambda x: x.json(),
-                        TechnologyModel.query.all()))})
+        return jsonify({list(map(lambda x: x.json(),
+                        TechnologyModel.query.all())))
