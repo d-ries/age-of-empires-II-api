@@ -7,11 +7,12 @@ from api.resources.technology import Technology, TechnologyList
 from config import API_PREFIX, SWAGGER_CONFIG
 from db import db
 from flasgger import Swagger
+from flask_cors import CORS
 
 def create_app(cfg):
         app = Flask(__name__)
         app.config.update(cfg)
-
+        CORS(app)
         api_blueprint = Blueprint(API_PREFIX + "/", __name__)
         api = Api(api_blueprint, prefix="/" + API_PREFIX)
 
