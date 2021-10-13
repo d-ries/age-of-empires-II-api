@@ -4,10 +4,10 @@
 [![Docker Image](https://img.shields.io/badge/Docker%20image-latest-blue.svg?link=https://hub.docker.com/r/aalises/aoe2api/)](https://hub.docker.com/r/aalises/aoe2api/)
 
 
-API available at : https://age-of-empires-2-api.herokuapp.com
+API available at : https://aoe2-pxl.herokuapp.com/
 
 Age of Empires II API created with:
- - `Flask + FlaskRESTful` 
+ - `Flask + FlaskRESTful + CORS` 
  - `SQLite` (DB)
  - `SQLAlchemy` (ORM)
  - `Flasgger` (Swagger Docs)
@@ -19,11 +19,7 @@ Which allows you to retrieve information about the civilizations, technologies, 
 docker build -t aoe2api:v1 .
 docker run --name aoe2api -p 8080:80 -d aoe2api:v1 
 ```
-or pull the image from DockerHub:
 
-```
-docker pull aalises/aoe2api:latest
-```
 The routes are: 
 - Main API route: `localhost:8080/api/v1`
 - Docs Route: `localhost:8080/docs`
@@ -248,4 +244,6 @@ Help to keep it running! If you're using it as a teaching resource or for a proj
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A3MTLTHWX686N&source=url)
 
 Become a backer!
+
+Credits go to aalises
 
